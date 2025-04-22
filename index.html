@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Developer Portfolio - Fredric Shernoff</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #34C759;
+            --dark-color: #1D1D1F;
+            --light-color: #F5F5F7;
+            --text-color: #333333;
+            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .bio {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .bio h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        .projects {
+            margin-top: 3rem;
+        }
+        
+        .projects h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3rem;
+        }
+        
+        .project-info {
+            padding: 2rem;
+        }
+        
+        .project-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .project-info p {
+            margin-bottom: 1rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech {
+            background-color: #E9E9EB;
+            color: var(--dark-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+        
+        .screenshots {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 1rem;
+            background-color: #F5F5F7;
+        }
+        
+        .screenshot {
+            min-width: 200px;
+            max-width: 200px;
+            height: 400px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,122,255,0.2);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .project-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .screenshots {
+                padding: 0.5rem;
+            }
+            
+            .screenshot {
+                min-width: 150px;
+                height: 300px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>iOS Developer | Swift Expert | Mobile App Creator</p>
+    </header>
+    
+    <div class="container">
+        <section class="bio">
+            <h2>About Me</h2>
+            <p>I'm a passionate iOS developer with a strong focus on creating intuitive, engaging mobile experiences. With expertise in Swift, UIKit, and SwiftUI, I build production-ready applications that users love. My apps are currently available on the App Store, demonstrating my ability to deliver polished, market-ready products.</p>
+            
+            <div class="skills">
+                <span class="skill-tag">Swift</span>
+                <span class="skill-tag">SwiftUI</span>
+                <span class="skill-tag">UIKit</span>
+                <span class="skill-tag">Core Data</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Xcode</span>
+                <span class="skill-tag">App Store Deployment</span>
+            </div>
+        </section>
+        
+        <section class="projects">
+            <h2>Featured Projects</h2>
+            
+            <!-- Draw Anything AI App -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Draw Anything AI</h3>
+                    <p>An intuitive iOS application that leverages AI to transform simple sketches into detailed artwork. Users can draw basic outlines and watch as the app generates professional-looking illustrations in various styles.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech">Swift</span>
+                        <span class="tech">SwiftUI</span>
+                        <span class="tech">Core ML</span>
+                        <span class="tech">AI Integration</span>
+                        <span class="tech">PencilKit</span>
+                    </div>
+                    
+                    <p><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Implemented real-time sketch-to-art conversion using custom ML models</li>
+                        <li>Designed an intuitive drawing interface with support for Apple Pencil</li>
+                        <li>Created a gallery system for saving and sharing generated artwork</li>
+                        <li>Optimized the app for performance on various iOS devices</li>
+                    </ul>
+                    
+                    <div class="links">
+                        <a href="#" class="btn"><i class="fab fa-app-store-ios"></i> View on App Store</a>
+                        <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repository</a>
+                    </div>
+                </div>
+                
+                <div class="screenshots">
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="Draw Anything AI - Sketch Interface">
+                    </div>
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="Draw Anything AI - Generated Art">
+                    </div>
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="Draw Anything AI - Gallery View">
+                    </div>
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="Draw Anything AI - Style Selection">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MyFandom App -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>MyFandom - Professional Wrestling Fan Experience</h3>
+                    <p>A comprehensive mobile application for professional wrestling fans to track events, follow wrestlers, get real-time updates, and connect with the community. Available on both iOS and Android platforms.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech">Swift</span>
+                        <span class="tech">UIKit</span>
+                        <span class="tech">Core Data</span>
+                        <span class="tech">Firebase</span>
+                        <span class="tech">REST APIs</span>
+                    </div>
+                    
+                    <p><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Developed a cross-platform application with consistent user experience</li>
+                        <li>Implemented real-time event tracking and notifications</li>
+                        <li>Created a robust database system for wrestler profiles and stats</li>
+                        <li>Built an interactive community feature with user profiles and discussions</li>
+                    </ul>
+                    
+                    <div class="links">
+                        <a href="#" class="btn"><i class="fab fa-app-store-ios"></i> iOS App Store</a>
+                        <a href="#" class="btn"><i class="fab fa-google-play"></i> Google Play Store</a>
+                        <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repository</a>
+                    </div>
+                </div>
+                
+                <div class="screenshots">
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="MyFandom - Home Screen">
+                    </div>
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="MyFandom - Wrestler Profiles">
+                    </div>
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="MyFandom - Event Calendar">
+                    </div>
+                    <div class="screenshot">
+                        <img src="/api/placeholder/200/400" alt="MyFandom - Community Feed">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <h3>Get In Touch</h3>
+        <div class="contact-info">
+            <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> youremail@example.com</a>
+            <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
