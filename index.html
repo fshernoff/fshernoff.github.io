@@ -1,408 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS Developer Portfolio - Fredric Shernoff</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #007AFF;
-            --secondary-color: #34C759;
-            --dark-color: #1D1D1F;
-            --light-color: #F5F5F7;
-            --text-color: #333333;
-            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-color);
-        }
-        
-        header {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .bio {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--card-shadow);
-        }
-        
-        .bio h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .skill-tag {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-        }
-        
-        .projects {
-            margin-top: 3rem;
-        }
-        
-        .projects h2 {
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .project-card {
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 3rem;
-        }
-        
-        .project-info {
-            padding: 2rem;
-        }
-        
-        .project-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--dark-color);
-        }
-        
-        .project-info p {
-            margin-bottom: 1rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .tech {
-            background-color: #E9E9EB;
-            color: var(--dark-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-        }
-        
-        .screenshots {
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-            padding: 1rem;
-            background-color: #F5F5F7;
-        }
-        
-        .screenshot {
-            min-width: 200px;
-            max-width: 200px;
-            height: 400px;
-            background-color: #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .screenshot img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,122,255,0.2);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        @media screen and (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .project-info h3 {
-                font-size: 1.5rem;
-            }
-            
-            .screenshots {
-                padding: 0.5rem;
-            }
-            
-            .screenshot {
-                min-width: 150px;
-                height: 300px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fredric Shernoff builds games, learning experiences, and production software across Unity, React, Firebase, Swift, and AI-assisted workflows.">
+  <meta name="theme-color" content="#0e1724">
+  <meta property="og:title" content="Fredric Shernoff — Product Developer &amp; Game Designer">
+  <meta property="og:description" content="Games, learning experiences, and production software built with care, curiosity, and modern tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fshernoff.github.io/">
+  <meta property="og:image" content="https://fshernoff.github.io/images/portfolio/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fredric Shernoff — Product Developer and Game Designer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://fshernoff.github.io/images/portfolio/og.png">
+  <title>Fredric Shernoff — Product Developer &amp; Game Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Fredric Shernoff</h1>
-        <p>iOS Developer | Swift/SwiftUI Expert | Mobile App Creator</p>
-    </header>
-    
-    <div class="container">
-        <section class="bio">
-            <h2>About Me</h2>
-            <p>I'm a passionate iOS developer with a strong focus on creating intuitive, engaging mobile experiences. With expertise in Swift, UIKit, and SwiftUI, I build production-ready applications that users love. My apps are currently available on the App Store, demonstrating my ability to deliver polished, market-ready products.</p>
-            
-            <div class="skills">
-                <span class="skill-tag">Swift</span>
-                <span class="skill-tag">SwiftUI</span>
-                <span class="skill-tag">UIKit</span>
-                <span class="skill-tag">Core Data</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">Xcode</span>
-                <span class="skill-tag">App Store Deployment</span>
-                <span class="skill-tag">Cross-Platform Development</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Fredric Shernoff, home">
+      <span class="wordmark-mark" aria-hidden="true">FS</span>
+      <span>Fredric Shernoff</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a class="nav-contact" href="mailto:fshernoff@gmail.com">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Product developer · Game designer · Creative technologist</p>
+        <h1>I build systems people can <em>play, learn from,</em> and rely on.</h1>
+        <p class="hero-lede">From a commercial Steam release to secure school platforms, I turn ambitious ideas into thoughtful, working products—across games, classrooms, mobile, and the web.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+          <a class="button button-quiet" href="mailto:fshernoff@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-label="Selected capabilities">
+        <div class="orbit-center">
+          <span>Idea</span>
+          <strong>→ Shipped</strong>
+        </div>
+        <span class="orbit-chip chip-one">Unity + C#</span>
+        <span class="orbit-chip chip-two">React + TypeScript</span>
+        <span class="orbit-chip chip-three">Swift + Mobile</span>
+        <span class="orbit-chip chip-four">Firebase + Cloud</span>
+        <span class="orbit-chip chip-five">AI-assisted workflows</span>
+      </div>
+
+      <div class="hero-proof" aria-label="Career highlights">
+        <div><strong>Steam</strong><span>Commercial game shipped</span></div>
+        <div><strong>Web + mobile</strong><span>Multi-platform products</span></div>
+        <div><strong>0 → 1</strong><span>Product, systems, and polish</span></div>
+      </div>
+    </section>
+
+    <section id="work" class="work section-shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Products with a point of view.</h2>
+        </div>
+        <p>Professional systems, learning experiences, and games—each shaped around the people who actually use them.</p>
+      </div>
+
+      <article class="project project-aegis reveal">
+        <div class="project-copy">
+          <div class="project-meta">
+            <span class="status status-live">Production-ready</span>
+            <span>Education technology</span>
+          </div>
+          <h3>Aegis</h3>
+          <p class="project-kicker">A safer, smarter operating system for student movement.</p>
+          <p>A multi-tenant hall pass and school operations platform with real-time capacity tracking, teacher and administrator workflows, public kiosks, analytics, and FERPA-conscious auditing.</p>
+          <ul class="project-highlights">
+            <li><strong>Complex product surface:</strong> role-aware dashboards, kiosks, waitlists, rosters, analytics, and emergency controls.</li>
+            <li><strong>Production architecture:</strong> school-isolated data, Cloud Functions, security rules, scheduled maintenance, and a broad automated test suite.</li>
+            <li><strong>Designed for the environment:</strong> accessible interfaces, mobile layouts, and low-friction flows for busy classrooms.</li>
+          </ul>
+          <div class="tag-row" aria-label="Aegis technologies">
+            <span>React</span><span>TypeScript</span><span>Firebase</span><span>Cloud Functions</span><span>Product design</span>
+          </div>
+          <p class="project-note">Private school deployment · Detailed walkthrough available on request</p>
+        </div>
+
+        <div class="aegis-visual" aria-label="Illustrated Aegis system overview">
+          <div class="aegis-topbar">
+            <span class="mini-brand"><i aria-hidden="true"></i> Aegis</span>
+            <span class="live-dot">Live operations</span>
+          </div>
+          <div class="aegis-grid">
+            <div class="metric-card metric-wide">
+              <span>Active passes</span>
+              <strong>18</strong>
+              <div class="spark-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             </div>
-        </section>
-        
-        <section class="projects">
-            <h2>Featured Projects</h2>
-
-            <!-- MyFandom App -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>MyFandom - Professional Wrestling Fan Experience</h3>
-                    <p>A comprehensive mobile application for professional wrestling fans to create their personal fandom history. Users can search a database of events, mark events they attended, add photos, and check in at live events to earn badges and achievements.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech">Swift</span>
-                        <span class="tech">SwiftUI</span>
-                        <span class="tech">Firebase</span>
-                        <span class="tech">REST APIs</span>
-                        <span class="tech">Location Services</span>
-                    </div>
-                    
-                    <p><strong>Key Achievements:</strong></p>
-                    <ul>
-                        <li>Developed a cross-platform application with consistent user experience</li>
-                        <li>Created an extensive searchable database of wrestling events and performers</li>
-                        <li>Implemented location-based check-in system with gamification features</li>
-                        <li>Built a media management system for user photos and memories</li>
-                        <li>Designed achievement and badge system to increase user engagement</li>
-                    </ul>
-                    
-                    <div class="links">
-                        <a href="https://apps.apple.com/in/app/myfandom/id6471019587" class="btn"><i class="fab fa-app-store-ios"></i> iOS App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.myfandom.myfandom" class="btn"><i class="fab fa-google-play"></i> Google Play Store</a>
-                    </div>
-                </div>
-                
-                <div class="screenshots">
-                    <div class="screenshot">
-                        <img src="/images/IMG_5421.png" alt="MyFandom - Home Screen">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/IMG_5422.png" alt="MyFandom - Calendar">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/IMG_5423.png" alt="MyFandom - Profile">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/IMG_5425.png" alt="MyFandom - Badges">
-                    </div>
-                </div>
+            <div class="metric-card"><span>On time</span><strong>94%</strong><small>Today</small></div>
+            <div class="metric-card"><span>Capacity</span><strong>12/16</strong><small>Across zones</small></div>
+            <div class="activity-card">
+              <span>Live movement</span>
+              <div class="activity-row"><i class="avatar mint">JS</i><b>Library → Room 214</b><em>2m</em></div>
+              <div class="activity-row"><i class="avatar gold">AL</i><b>Room 108 → Guidance</b><em>4m</em></div>
+              <div class="activity-row"><i class="avatar blue">MR</i><b>Cafeteria → Room 302</b><em>6m</em></div>
             </div>
-            
-            <!-- Draw Anything AI App -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Draw Anything AI</h3>
-                    <p>An intuitive iOS application that leverages AI to transform simple sketches into detailed artwork. Users can draw basic outlines and watch as the app generates professional-looking illustrations in various styles.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech">Swift</span>
-                        <span class="tech">SwiftUI</span>
-                        <span class="tech">REST APIs</span>
-                        <span class="tech">AI Integration</span>
-                        <span class="tech">PencilKit</span>
-                    </div>
-                    
-                    <p><strong>Key Achievements:</strong></p>
-                    <ul>
-                        <li>Implemented real-time sketch-to-art conversion using REST API integration</li>
-                        <li>Incorporates state-of-the-art generative AI (GPT Image)</li>
-                        <li>Uses Node.JS backend cloud functions to transmit data using secure API Keys</li>
-                        <li>Designed an intuitive drawing interface with support for Apple Pencil</li>
-                        <li>Created a gallery system for saving and sharing generated artwork</li>
-                        <li>Optimized the app for performance on various iOS devices</li>
-                    </ul>
+          </div>
+          <p class="visual-caption">System overview illustration. Product screens available privately.</p>
+        </div>
+      </article>
 
-                    <div class="links">
-                        <a href="https://apps.apple.com/us/app/draw-anything-ai/id1664575459" class="btn"><i class="fab fa-app-store-ios"></i> iOS App Store</a>
-                    </div>
-                </div>
-                
-                <div class="screenshots">
-                    <div class="screenshot">
-                        <img src="/images/IMG_5485.PNG" alt="Draw Anything AI - Gallery">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/IMG_5488.PNG" alt="Draw Anything AI - Create">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/IMG_5489.PNG" alt="Draw Anything AI - Original Image">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/IMG_5490.PNG" alt="Draw Anything AI - AI Magic">
-                    </div>
-                </div>
-            </div>
+      <article class="project project-biz reveal">
+        <div class="project-media media-browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span>Teacher class board</span></div>
+          <img src="images/portfolio/bizbattles-dashboard.png" alt="BizBattles teacher dashboard showing a live classroom game" width="1440" height="900" loading="lazy">
+        </div>
+        <div class="project-copy">
+          <div class="project-meta">
+            <span class="status status-beta">Live beta</span>
+            <span>Learning game</span>
+          </div>
+          <h3>BizBattles</h3>
+          <p class="project-kicker">A food-truck business simulation built for the classroom.</p>
+          <p>Students form companies, make operational decisions, react to changing conditions, and learn to explain the business concepts behind their results. Teachers pace the simulation and turn every season into a debrief.</p>
+          <ul class="project-highlights compact">
+            <li>Teacher-led multiplayer classroom loop with no student email required.</li>
+            <li>Decision systems spanning route, menu, operations, promotion, finance, and market events.</li>
+            <li>Real-time class management, team access, QR joining, and concept-focused results.</li>
+          </ul>
+          <div class="tag-row" aria-label="BizBattles technologies">
+            <span>React</span><span>Firebase</span><span>Game systems</span><span>Classroom UX</span>
+          </div>
+          <a class="text-link" href="https://businessbattles.web.app/teachers" target="_blank" rel="noreferrer">Visit BizBattles <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-            <!-- Data Center Tycoon -->
-<div class="project-card">
-    <div class="project-info">
-        <h3>Data Center Tycoon - IT Infrastructure Idle Game</h3>
-        <p>A sophisticated idle/incremental game where players build and manage data center empires. Starting with a single server rack, players expand globally while managing real-world challenges like power outages, security breaches, and client contracts.</p>
-        
-        <div class="tech-stack">
-            <span class="tech">Swift</span>
-            <span class="tech">SwiftUI</span>
-            <span class="tech">SwiftData</span>
-            <span class="tech">StoreKit</span>
-            <span class="tech">CloudKit</span>
-            <span class="tech">Core Haptics</span>
-            <span class="tech">AVFoundation</span>
+      <article class="project project-scorched reveal">
+        <div class="project-copy">
+          <div class="project-meta">
+            <span class="status status-shipped">Shipped</span>
+            <span>Commercial PC game</span>
+          </div>
+          <h3>Scorched Legacy</h3>
+          <p class="project-kicker">Turn-based artillery, roguelike progression, and one more run.</p>
+          <p>A modern love letter to the DOS classic <cite>Scorched Earth</cite>. Players aim around wind and terrain, fight through twelve battles, unlock 50+ weapons, and carry permanent progress between runs.</p>
+          <ul class="project-highlights compact">
+            <li>Designed, developed, and published independently on Steam.</li>
+            <li>Procedural combat, persistent unlocks, multiple tank classes, achievements, and multiplayer in beta.</li>
+          </ul>
+          <div class="tag-row" aria-label="Scorched Legacy technologies">
+            <span>PC</span><span>Game design</span><span>Systems design</span><span>Steam publishing</span>
+          </div>
+          <a class="button button-light" href="https://store.steampowered.com/app/4326140/Scorched_Legacy/" target="_blank" rel="noreferrer">View on Steam <span aria-hidden="true">↗</span></a>
         </div>
-        
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-            <li>Developed a complex multi-system idle game with 9 interconnected progression systems</li>
-            <li>Implemented authentic data center infrastructure with realistic server equipment</li>
-            <li>Created dynamic event system with strategic decision-making for operational challenges</li>
-            <li>Built global expansion system with region-specific bonuses and specializations</li>
-            <li>Designed comprehensive contract system with multiple client types and reputation mechanics</li>
-            <li>Integrated prestige system with Legacy Chips for permanent progression bonuses</li>
-            <li>Implemented sophisticated offline earnings calculation with specialist bonuses</li>
-            <li>Added premium IAP features including data boosts and ad removal</li>
-        </ul>
-        
-        <div class="links">
-            <a href="#" class="btn"><i class="fab fa-app-store-ios"></i> Coming to App Store</a>
-        </div>
-    </div>
-    
-    <div class="screenshots">
-        <div class="screenshot">
-            <img src="/images/dct1.png" alt="Data Center Tycoon - Dashboard">
-        </div>
-        <div class="screenshot">
-            <img src="/images/dct2.png" alt="Data Center Tycoon - Generators">
-        </div>
-        <div class="screenshot">
-            <img src="/images/dct3.png" alt="Data Center Tycoon - Research">
-        </div>
-        <div class="screenshot">
-            <img src="/images/dct4.png" alt="Data Center Tycoon - Specialists">
-        </div>
-    </div>
-</div>
+        <a class="game-media" href="https://store.steampowered.com/app/4326140/Scorched_Legacy/" target="_blank" rel="noreferrer" aria-label="View Scorched Legacy on Steam">
+          <img src="images/portfolio/scorched-legacy.jpg" alt="Scorched Legacy artillery battle with tanks firing across destructible terrain" width="1725" height="1080" loading="lazy">
+          <span class="media-badge">Available on Steam</span>
+        </a>
+      </article>
 
-            
-        </section>
-    </div>
-    
-    <footer>
-        <h3>Get In Touch</h3>
-        <div class="contact-info">
-            <a href="mailto:fshernoff@gmail.com"><i class="fas fa-envelope"></i> fshernoff@gmail.com</a>
-            <a href="https://linkedin.com/in/fshernoff"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <div class="project-grid">
+        <article class="small-project project-datacenter reveal">
+          <div class="small-media">
+            <img src="images/portfolio/datacenter-regions.png" alt="Data Center Tycoon regional expansion screen" width="794" height="450" loading="lazy">
+          </div>
+          <div class="small-copy">
+            <div class="project-meta"><span class="status status-free">Free release</span><span>Side project</span></div>
+            <h3>Data Center Tycoon</h3>
+            <p>Build a data center empire, balance infrastructure upgrades, research new technology, expand into new regions, and prestige your way to exabytes.</p>
+            <div class="tag-row"><span>Incremental design</span><span>Web</span><span>Economy systems</span></div>
+            <a class="text-link" href="https://whitemarshgames.itch.io/datacenter-tycoon" target="_blank" rel="noreferrer">Play free on itch.io <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="small-project project-divine reveal">
+          <div class="small-media divine-media">
+            <img src="images/portfolio/divine-nuisance-opening.png" alt="Divine Nuisance opening sequence showing a pixel-art character on a dimly lit city street" width="1920" height="1084" loading="lazy">
+            <span class="media-badge">Opening sequence · Work in progress</span>
+          </div>
+          <div class="small-copy">
+            <div class="project-meta"><span class="status status-progress">In development</span><span>Unity narrative game</span></div>
+            <h3>Divine Nuisance</h3>
+            <p>An atmospheric, character-led Unity project currently in active development. The opening sequence is playable and visually established; the wider experience is still taking shape.</p>
+            <div class="tag-row"><span>Unity</span><span>C#</span><span>Narrative systems</span><span>Cinematic direction</span></div>
+            <span class="text-link text-link-muted">Coming soon</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach" class="approach section-shell">
+      <div class="section-heading approach-heading">
+        <div>
+          <p class="eyebrow">How I work</p>
+          <h2>Modern tools. Human judgment.</h2>
         </div>
-    </footer>
+        <p>I use AI extensively—as a research partner, prototyping accelerator, testing aid, and creative production tool. The product decisions, architecture, gameplay, security, and final standard remain mine.</p>
+      </div>
+      <div class="approach-grid">
+        <article><span>01</span><h3>Find the real problem</h3><p>Start with the user, the environment, and the constraint—not the most fashionable implementation.</p></article>
+        <article><span>02</span><h3>Prototype the risky part</h3><p>Use code, AI, design tools, and playtests to answer hard questions before polishing the wrong idea.</p></article>
+        <article><span>03</span><h3>Build the whole experience</h3><p>Connect systems, interface, content, accessibility, operations, and edge cases into something coherent.</p></article>
+        <article><span>04</span><h3>Ship, observe, improve</h3><p>Validate with real use, tighten what matters, document the work, and keep the product maintainable.</p></article>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell">
+      <div class="about-copy">
+        <p class="eyebrow">About</p>
+        <h2>Creative range, production discipline.</h2>
+        <p>I’m Fredric Shernoff, a developer and designer who enjoys moving between playful systems and serious products. I’ve shipped native mobile apps, classroom platforms, web games, and a commercial PC title.</p>
+        <p>Earlier work includes MyFandom, a cross-platform live-event fandom product for iOS and Android, and Draw Anything AI, a native iOS creative app. Both products have since been retired, but they remain an important part of my experience shipping consumer software.</p>
+        <p>I’m especially drawn to work where technology can make learning, community, culture, or storytelling more engaging.</p>
+      </div>
+      <div class="skills-panel">
+        <div>
+          <span class="skill-label">Product engineering</span>
+          <p>React · TypeScript · Firebase · Cloud Functions · Swift · SwiftUI · Android · APIs</p>
+        </div>
+        <div>
+          <span class="skill-label">Games & interaction</span>
+          <p>Unity · C# · Godot · Game systems · Progression · UI/UX · Steam · itch.io</p>
+        </div>
+        <div>
+          <span class="skill-label">AI &amp; creative workflow</span>
+          <p>Rapid prototyping · Research · Automation · Evaluation · Image workflows · Development tooling</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell">
+      <p class="eyebrow">What’s next?</p>
+      <h2>Let’s build something people remember.</h2>
+      <p>I’m interested in ambitious product and game work—especially experiences that bring people together through play, learning, story, or culture.</p>
+      <div class="contact-actions">
+        <a class="button button-primary" href="mailto:fshernoff@gmail.com">fshernoff@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Fredric Shernoff</span>
+    <span>Designed and built with care.</span>
+  </footer>
 </body>
 </html>
