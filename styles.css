@@ -109,6 +109,13 @@ h3 { font-size: clamp(2rem, 3.2vw, 3.5rem); margin-bottom: .8rem; }
 .hero-proof strong { font-family: var(--display); font-size: 1.1rem; }
 .hero-proof span { color: var(--ink-soft); font-size: .88rem; }
 
+.experience { padding: 7rem 0 0; }
+.experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.experience-grid article { padding: 2rem; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+.experience-grid h3 { font-size: 1.55rem; line-height: 1.2; letter-spacing: -.03em; }
+.experience-role { color: var(--blue); font-size: .88rem; font-weight: 700; }
+.experience-grid article > p:last-child { margin-bottom: 0; color: var(--ink-soft); }
+
 .work { padding: 9rem 0; }
 .section-heading { display: grid; grid-template-columns: 1fr minmax(280px, 470px); gap: 4rem; align-items: end; margin-bottom: 4rem; }
 .section-heading > p { margin-bottom: .5rem; color: var(--ink-soft); font-size: 1.1rem; }
@@ -243,6 +250,9 @@ h3 { font-size: clamp(2rem, 3.2vw, 3.5rem); margin-bottom: .8rem; }
   .hero-orbit { width: min(100%, 460px); margin: 4.5rem auto 3.5rem; }
   .hero-proof { gap: 1rem; }
   .hero-proof div { padding: 0 .65rem; }
+  .experience { padding-top: 6rem; }
+  .experience-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .experience-grid article { padding: 1.5rem; }
   .work, .approach, .about { padding: 6rem 0; }
   .section-heading { display: block; margin-bottom: 2.5rem; }
   .section-heading > p { margin-top: 1.4rem; }
